@@ -1,6 +1,7 @@
 import json
 import csv
 
+from processamentos_dados import dados
 
 def leitura_json(path_json):
     dados_json = []
@@ -72,6 +73,8 @@ def salvando_dados(dados, path):
 path_json = 'data_raw/dados_empresaA.json'
 path_csv = 'data_raw/dados_empresaB.csv'
 
+dados_empresaA = dados(path_json, 'json')
+print(dados_empresaA.path)
 
 # Iniciando a leitura dos dados
 dados_json = leitura_dados(path_json, 'json')
